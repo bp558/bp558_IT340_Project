@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SimplyNotes — Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar" role="banner">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">📝</div>
+      <h1>SimplyNotes</h1>
+      <span style="opacity:0.9; margin-left:8px; font-size:13px;">— your notes, organized</span>
+    </div>
+
+    <div class="actions">
+      <span id="currentUser" style="font-size:13px;">Signed in as <strong id="userEmail">you@example.com</strong></span>
+      <a href="index.html" id="logout">Logout</a>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="Sidebar">
+      <h3>Account</h3>
+      <!-- role-badge can be updated dynamically based on user role -->
+      <div class="role-badge" id="roleBadge">Editor</div>
+
+      <div style="margin-top:12px;">
+        <strong>Folders / Categories</strong>
+        <div class="filters" id="categoryList">
+          <button data-category="all">All Notes</button>
+          <button data-category="personal">Personal</button>
+          <button data-category="work">Work</button>
+          <button data-category="archive">Archive</button>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;">
+        <strong>Extras</strong>
+        <div style="font-size:13px; color:#607d8b; margin-top:8px;">
+          • AI note assistant (EC)<br>
+          • Media: images/audio/video (EC)<br>
+          • Comment system (by role)
+        </div>
+    </aside>
+
+    <!-- Main content -->
+    <section class="main">
+      <div class="toolbar">
+        <div class="search-box">
+          <input id="searchInput" type="search" placeholder="Search notes..." aria-label="Search notes" />
+        </div>
+        <div>
+          <button class="new-note" id="btnNewNote">+ New Note</button>
+        </div>
+      </div>
+
+      <div class="notes-grid" id="notesGrid" aria-live="polite">
+        <!-- NOTE CARDS injected by JS -->
+      </div>
+
+    </section>
+  </main>
+
+  <script src="js/dashboard.js" defer></script>
+</body>
+</html>

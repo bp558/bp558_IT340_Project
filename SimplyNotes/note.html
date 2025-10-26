@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SimplyNotes — Note</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar" role="banner">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">📝</div>
+      <h1>SimplyNotes</h1>
+    </div>
+
+    <div class="actions">
+      <a href="dashboard.html">← Back to Dashboard</a>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <section class="main">
+      <div class="note-editor">
+        <input id="noteTitle" type="text" placeholder="Note title..." />
+        <textarea id="noteContent" placeholder="Write your note here..."></textarea>
+
+        <div class="note-controls">
+          <button id="saveNote">💾 Save</button>
+          <button id="deleteNote" class="danger">🗑 Delete</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/note.js" defer></script>
+</body>
+</html>

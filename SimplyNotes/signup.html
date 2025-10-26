@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SimplyNotes - Sign Up</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <div class="logo-section">
+      <div class="logo">
+        <span class="logo-icon">📝</span>
+      </div>
+      <h1>Join SimplyNotes</h1>
+      <p class="subtitle">Create your account below.</p>
+    </div>
+
+    <form action="dashboard.html">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Create a password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="accountType">Account Type</label>
+        <select id="accountType" required>
+          <option value="">Select a role...</option>
+          <option value="viewer">Viewer</option>
+          <option value="editor">Editor</option>
+          <option value="commenter">Commenter</option>
+        </select>
+      </div>
+
+      <button type="submit" class="login-button">Create Account</button>
+
+      <div class="divider">
+        <span>OR</span>
+      </div>
+
+      <div class="signup-link">
+        Already have an account? <a href="index.html">Login</a>
+      </div>
+    </form>
+  </div>
+<script src="js/main.js"></script>
+</body>
+</html>
